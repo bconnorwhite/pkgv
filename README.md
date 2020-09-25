@@ -28,6 +28,16 @@ yarn add pkgv
 npm install pkgv
 ```
 
+## Usage
+
+```
+yarn pkgv
+```
+
+```
+npx pkgv
+```
+
 <br />
 
 <h2>Dependencies<img align="right" alt="dependencies" src="https://img.shields.io/david/bconnorwhite/pkgv.svg"></h2>
