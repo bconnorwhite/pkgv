@@ -28,24 +28,34 @@
   "files": [
     "build"
   ],
-  "main": "./build/index.js",
   "bin": {
-    "pkgv": "./build/index.js"
+    "pkgv": "./build/bin/index.js"
   },
+  "main": "./build/index.js",
   "scripts": {
     "build": "bob build",
+    "commit": "bob commit",
     "lint": "bob lint",
-    "postversion": "git push --follow-tags",
-    "prepublishOnly": "yarn run lint && yarn run build"
+    "pkgv": "./build/bin/index.js",
+    "release": "bob publish",
+    "test": "bob test"
   },
   "dependencies": {
-    "@bconnorwhite/package": "^4.2.1"
+    "@bconnorwhite/package": "^4.3.0",
+    "commander-version": "^2.0.0"
   },
   "devDependencies": {
-    "@bconnorwhite/bob": "^2.4.2"
+    "@bconnorwhite/bob": "^2.9.4",
+    "@types/mock-fs": "^4.13.1",
+    "mock-fs": "^5.0.0"
   },
   "eslintConfig": {
     "extends": "eslint-config-bob"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "bob lint commit"
+    }
   },
   "npmpackagejsonlint": {
     "extends": "npm-package-json-lint-config-bob"

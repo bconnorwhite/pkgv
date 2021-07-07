@@ -1,13 +1,16 @@
 <div align="center">
   <h1>pkgv</h1>
   <a href="https://npmjs.com/package/pkgv">
-    <img alt="npm" src="https://img.shields.io/npm/v/pkgv.svg">
+    <img alt="NPM" src="https://img.shields.io/npm/v/pkgv.svg">
   </a>
   <a href="https://github.com/bconnorwhite/pkgv">
-    <img alt="typescript" src="https://img.shields.io/badge/TypeScript-%F0%9F%91%8D-blue.svg">
+    <img alt="TypeScript" src="https://img.shields.io/github/languages/top/bconnorwhite/pkgv.svg">
+  </a>
+  <a href="https://coveralls.io/github/bconnorwhite/pkgv?branch=master">
+    <img alt="Coverage Status" src="https://coveralls.io/repos/github/bconnorwhite/pkgv/badge.svg?branch=master">
   </a>
   <a href="https://github.com/bconnorwhite/pkgv">
-    <img alt="GitHub stars" src="https://img.shields.io/github/stars/bconnorwhite/pkgv?label=Stars%20Appreciated%21&style=social">
+    <img alt="GitHub Stars" src="https://img.shields.io/github/stars/bconnorwhite/pkgv?label=Stars%20Appreciated%21&style=social">
   </a>
   <a href="https://twitter.com/bconnorwhite">
     <img alt="Twitter Follow" src="https://img.shields.io/twitter/follow/bconnorwhite.svg?label=%40bconnorwhite&style=social">
@@ -20,22 +23,37 @@
 
 ## Installation
 
-```bash
+```sh
 yarn add pkgv
 ```
 
-```bash
+```sh
 npm install pkgv
 ```
 
-## Usage
+## CLI Usage
 
-```
+```sh
 yarn pkgv
 ```
 
-```
+```sh
 npx pkgv
+```
+
+## API Usage
+
+```ts
+import { getPackageVersion } from "pkgv";
+
+const version = await getPackageVersion();
+```
+
+## Types
+```ts
+import { getPackageVersion } from "pkgv";
+
+function getPackageVersion(): Promise<string | undefined>;
 ```
 
 <br />
@@ -43,12 +61,15 @@ npx pkgv
 <h2>Dependencies<img align="right" alt="dependencies" src="https://img.shields.io/david/bconnorwhite/pkgv.svg"></h2>
 
 - [@bconnorwhite/package](https://www.npmjs.com/package/@bconnorwhite/package): A utility for reading package.json of a project, and forming paths relative to it.
+- [commander-version](https://www.npmjs.com/package/commander-version): A wrapper for Commander that automatically sets the version based on your package.json
 
 <br />
 
 <h2>Dev Dependencies<img align="right" alt="David" src="https://img.shields.io/david/dev/bconnorwhite/pkgv.svg"></h2>
 
 - [@bconnorwhite/bob](https://www.npmjs.com/package/@bconnorwhite/bob): Bob is a toolkit for TypeScript projects
+- [@types/mock-fs](https://www.npmjs.com/package/@types/mock-fs): TypeScript definitions for mock-fs
+- [mock-fs](https://www.npmjs.com/package/mock-fs): A configurable mock file system.  You know, for testing.
 
 <br />
 
